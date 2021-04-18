@@ -30,11 +30,11 @@ def scrape_mars_news():
     # Extract latest news title and paragraph text
     article = soup.find("div", class_="list_text")
     news_title = article.find("div", class_="content_title").text
-    news_p = article.find("div", class_="article_teaser_body").text
+    news_paragraph = article.find("div", class_="article_teaser_body").text
 
     # Enter results into Dictionary
     mars_info['news_title'] = news_title
-    mars_info['news_paragraph'] = news_p
+    mars_info['news_paragraph'] = news_paragraph
     
     browser.quit()
     
