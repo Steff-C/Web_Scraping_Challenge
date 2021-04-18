@@ -26,6 +26,7 @@ def scrape():
     mars_info = mongo.db.mars_info
     mars_data = scrape_mars.scrape_mars_news()
     mars_data = scrape_mars.scrape_mars_image()
+    mars_data = scrape_mars.mars_scrape_facts()
     mars_data = scrape_mars.scrape_mars_hemisphere()
     mars_info.update({}, mars_data, upsert=True)
 
