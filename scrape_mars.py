@@ -29,7 +29,8 @@ def scrape_mars_news():
 
     # Extract latest news title and paragraph text
     article = soup.find("div", class_="list_text")
-    news_title = article.find("div", class_="content_title").text
+    news_title = article.find("div", class_="content_title").find('a').text
+    print(f"title{nasa_news_title")
     news_paragraph = article.find("div", class_="article_teaser_body").text
 
     # Enter results into Dictionary
